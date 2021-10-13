@@ -1,0 +1,77 @@
+<div class="col-md-9 menu-mobile collapse" id="navbarToggleExternalContent" [class.d-block]="toggleMenu">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Customers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Resources</a>
+      </li>
+    </ul>
+    <div class="d-flex buttons-box">
+      <button class="button-border-white">Sign In</button>
+      <button class="button-green">Sign Up</button>
+      <button class="button-frame">
+        <img src="/assets/frame.svg" alt="frame" />
+      </button>
+    </div>
+</div>
+<nav class="navbar navbar-header">
+  <div class="container">
+    <div class="col-md-3 logo">
+      <a class="h3" href="#">
+        <img
+          src="/assets/product.svg"
+          alt="products"
+          class="d-inline-block align-text-top pr-3"
+        />
+        Products
+      </a>
+    </div>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleMenu=!toggleMenu"
+    >
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+
+    <div class="col-md-9 menu me-auto">
+      <ul class="nav" id="menu-mobile">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Customers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Resources</a>
+        </li>
+      </ul>
+      <div class="d-flex buttons-box">
+        <button class="button-border-white">Sign In</button>
+        <button class="button-green mx-3">Sign Up</button>
+        <button class="button-frame">
+          <img src="/assets/frame.svg" alt="frame" />
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+

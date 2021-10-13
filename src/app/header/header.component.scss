@@ -1,0 +1,74 @@
+@import '/src/base/index';
+
+::ng-deep.navbar-header{
+    padding: 1rem 0;
+    max-height: 80px;
+    background-color: $color-secondary-darkest;
+    .logo{
+        img{
+            @include dimensions(40px, 40px);
+            margin-right: 0.5rem;
+        }
+        a{
+            color: $color-white;
+        }
+    }
+    .navbar-toggler{
+        display: none;
+        @include mq(tab){
+            display: block;
+        }
+    }
+    .menu{
+        @include display-align(flex, flex-end, center);
+        @include mq(tab){
+            display: none;
+        }
+        a{
+            @include txt(null, normal, $color-white, $font-text, 16px);
+            line-height: 28px;
+            text-decoration: none;
+            &:hover, &.active{
+                font-weight: bold;
+            }
+        }
+        .buttons-box{
+            @include display-align(flex, null, center);
+        }
+    }
+    .navbar-toggler{
+        padding: 0 1rem;
+        i{
+            color: $color-white;
+            font-size: 31px;
+        }
+    }
+}
+::ng-deep.menu-mobile{
+    @include dimensions(100vh, 100%);
+    @include position-box(absolute, 72px, null, null, null);
+    padding: 1rem;
+    background-color: $color-secondary-dark;
+    .nav{
+        flex-direction: column;
+    }
+    a{
+        @include txt(null, normal, $color-white, $font-text, 16px);
+        line-height: 28px;
+        text-decoration: none;
+        &:hover, &.active{
+            font-weight: bold;
+        }
+    }
+    .buttons-box{
+        flex-direction: column;
+        margin-top: 2rem;
+        button{
+            width: 100%;
+            margin-bottom: 1rem;
+            &.button-frame{
+                display: none;
+            }
+        }
+    }
+}

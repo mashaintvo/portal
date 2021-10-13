@@ -1,0 +1,42 @@
+@import '/src/base/index';
+
+::ng-deep.contact-home{
+    @include display-align(flex, null, center);
+    padding: 3rem 0;
+    height: 600px;
+    background-color: $color-secondary-dark;
+    position: relative;
+    z-index: -2;
+    @include mq(tab){
+        height: 100%;
+        background-color: $color-secondary-darkest;
+    }
+    .contact{
+        @include mq(tab){
+            padding: 0 3rem;
+        }
+        h2{
+            color: $color-white;
+        }
+        p{
+            color: $color-white;
+        }
+        img{
+            @include mq(tab){
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+        &:after{
+            @include position-box(absolute, 0, 0, 0, 0);
+            @include dimensions(99%, 100%);
+            @include radius(50% 50% 0 0);
+            content: '';
+            background-color: $color-secondary-darkest;
+            z-index: -1;
+            @include mq(tab){
+                display: none
+            }
+        }
+    }
+}

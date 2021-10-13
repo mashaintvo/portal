@@ -1,0 +1,64 @@
+@mixin box-styles($bg-color, $color-text, $border-width, $border-style, $border-color) {
+    background-color: $bg-color;
+    color: $color-text;
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+}
+@mixin dimensions($height, $width) {
+    width: $width;
+    height: $height;
+}
+@mixin display-align($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin paragraphs($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+@mixin position-box($position, $top, $right, $bottom, $left) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin radius($radio) {
+    -moz-border-radius: $radio;
+    -webkit-border-radius: $radio;
+    border-radius: $radio;
+}
+@mixin titles($font-size, $font-family) {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+@mixin txt($text-align, $font-weight, $color, $font-family, $font-size) {
+    text-align: $text-align;
+    font-weight: $font-weight;
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+// MEDIAQUERIES
+@mixin mq($media) {
+    @if type-of($media) ==number {
+      @if unitless($media) {
+        @media only screen and (max-width: $media + px) {
+          @content;
+        }
+      }
+    } @else {
+      @if type-of(map-get($mediaqueries, $media)) ==number {
+        @media only screen and (max-width: map-get($mediaqueries, $media) + px) {
+          @content;
+        }
+      } @else if type-of(map-get($mediaqueries, $media)) ==string {
+        @media #{map-get($mediaqueries,$media)} {
+          @content;
+        }
+      }
+    }
+}

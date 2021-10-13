@@ -1,0 +1,42 @@
+@import '/src/base/index';
+
+::ng-deep.services-home{
+    padding: 1rem;
+    background-color: $color-secondary-dark;
+    p{
+        color: $color-white;
+    }
+    img{
+        max-width: 540px;
+        padding: 1rem;
+        @include mq(tab){
+            width: 100%;
+        }
+    }
+    .custom-item{
+        padding: 0;
+        li{
+            @include display-align(flex, null, center);
+            color: $color-white;
+            .product-icon{
+                @include display-align(flex, center, center);
+                @include dimensions(35px, 35px);
+                @include radius(14px);
+                border: 0;
+                i{
+                    color: $color-white;
+                }
+             
+                &.blue{
+                    background-color: $color-fifth;
+                }
+                &.orange{
+                    background-color: $color-sixth;
+                }
+                &.red{
+                    background-color: $color-fourth;
+                }
+            }
+        }
+    }
+}

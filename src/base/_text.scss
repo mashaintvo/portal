@@ -1,0 +1,54 @@
+// Base
+* {
+    font-family: $font-text;
+}
+// Color Text Class
+.color-red{
+    color: $color-fourth;
+}
+.color-purple{
+    color: $color-third;
+}
+.color-blue{
+    color: $color-secondary;
+}
+.color-green{
+    color: $color-primary;
+}
+.color-gray{
+    color: $color-secondary;
+}
+.color-gray-light{
+    color: $color-secondary-light;
+}
+.color-gray-dark{
+    color: $color-secondary-dark;
+}
+.h1{
+    @include txt(null, bold, null, $font-text, 40px);
+    line-height: 60px;
+    text-decoration: none;
+    @include mq(tab){
+        font-size: 36px;
+    }
+}
+.h2{
+    @include txt(null, bold, null, $font-text, 32px);
+    line-height: 48px;
+    text-decoration: none;
+}
+.h3{
+    @include txt(null, bold, null, $font-text, 30px);
+    line-height: 28px;
+    text-decoration: none;
+}
+.h4{
+    @include txt(null, bold, null, $font-text, 22px);
+    line-height: 33px;
+    text-decoration: none;
+}
+.p1{
+    @include txt(null, normal, null, $font-text, 16px);
+    line-height: 26px;
+    text-decoration: none;
+}
