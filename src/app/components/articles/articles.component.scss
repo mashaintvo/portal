@@ -1,0 +1,13 @@
+@import '/src/base/index';
+
+::ng-deep.articles-home{
+    background-color: $color-secondary-darkest;
+    padding: 2rem 1rem;
+    height: 600px;
+    h2{
+        color: $color-white;
+    }
+    p{
+        color: $color-white;
+    }
+}

@@ -29,7 +29,7 @@
         }
         &:after{
             @include position-box(absolute, 0, 0, 0, 0);
-            @include dimensions(99%, 100%);
+            @include dimensions(100%, 100%);
             @include radius(50% 50% 0 0);
             content: '';
             background-color: $color-secondary-darkest;

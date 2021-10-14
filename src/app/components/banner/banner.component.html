@@ -11,7 +11,7 @@
           <button class="button-green px-3 px-md-4">Get started</button>
           <div class="d-flex video-link">
             <i class="fas fa-play"></i>
-            <a href="#">Watch the Video</a>
+            <a (click)="openModal()">Watch the Video</a>
           </div>
         </div>
       </div>
@@ -25,3 +25,18 @@
     </div>
   </div>
 </div>
+
+
+<ng-template #modalTemplate>
+  <div class="modal-body">
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="closeModal()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eSu76FtWugg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</ng-template>

@@ -1,0 +1,41 @@
+.modal-dialog{
+    @include display-align(flex, center, center);
+    @include dimensions(100%, 100%);
+    margin: auto;
+    .modal-content{
+        @include dimensions(456px, 846px);
+        @include radius(10px);
+        background-color: $color-primary;
+        border: 0;
+        @include mq(tab){
+            @include dimensions(330px, 100%);
+        }
+        .modal-body{
+            @include dimensions(300px, 846px);
+            display: flex;
+            @include mq(tab){
+                @include dimensions(300px, 100%);
+            }
+            .close{
+                @include display-align(flex, center, center);
+                @include radius(50%);
+                @include dimensions(53px, 53px);
+                background-color: $color-primary;
+                position: absolute;
+                right: 0;
+                margin: -2rem 1rem;
+                border: 0;
+                span{
+                    font-size: 26px;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+iframe{
+    @include dimensions(420px, 100%);
+    @include mq(tab){
+        @include dimensions(300px, 100%);
+    }
+}

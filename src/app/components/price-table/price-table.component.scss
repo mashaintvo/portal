@@ -1,0 +1,11 @@
+@import '/src/base/index';
+
+::ng-deep.price-table{
+    background-color: $color-secondary-darkest;
+    padding: 1rem;
+    height: 600px;
+    .price{
+        text-align: center;
+        color: $color-white;
+    }
+}

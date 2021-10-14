@@ -33,6 +33,7 @@
     .video-link{
         @include display-align(flex, null, center);
         color: $color-primary;
+        cursor: pointer;
         i{
             margin-right: 0.5rem;
             margin-left: 1.5rem;
